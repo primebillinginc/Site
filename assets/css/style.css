@@ -111,7 +111,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header .logo {
-  font-size: 30px;
+  font-size: 2vw;
   margin: 0;
   padding: 0;
   line-height: 1;
