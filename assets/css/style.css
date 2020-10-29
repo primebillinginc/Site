@@ -1854,12 +1854,12 @@ section {
 #footer .copyright span{
 
 
-  @font-face {
+  /* @font-face {
     font-family: 'BankGothic Md BT';
     src: url('fonts/bank-gothic-medium-bt.ttf');
-  }
+  } */
 
-  /* font-family: 'BankGothic Md BT'; */
+  font-family: 'BankGothic Md BT';
   font-size: 18px;
 
 }
