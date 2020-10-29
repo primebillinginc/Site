@@ -112,7 +112,11 @@ h1, h2, h3, h4, h5, h6 {
 
 #header .logo {
   font-size: 200%;
-  font-family: 'BankGothic Md BT';
+  /* font-family: 'BankGothic Md BT'; */
+  @font-face {
+    font-family: 'BankGothic Md BT';
+    src: url('fonts/bank-gothic-medium-bt.ttf');
+  }
   margin: 0;
   padding: 0;
   line-height: 1;
