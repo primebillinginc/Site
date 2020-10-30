@@ -1693,7 +1693,8 @@ section {
 --------------------------------------------------------------*/
 #footer {
   font-size: 14px;
-  background: #37517e;
+  /* background: #37517e; */
+  background: #012640;
 }
 
 #footer .footer-newsletter {
