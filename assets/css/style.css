@@ -21,6 +21,14 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Jost", sans-serif;
 }
 
+@font-face {
+  font-family: 'bankgothic_md_btmedium';
+  src: url('bank-gothic-medium-bt-webfont.woff2') format('woff2'),
+       url('bank-gothic-medium-bt-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
@@ -112,7 +120,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #header .logo {
   font-size: 200%;
-  font-family: 'BankGothic Md BT';
+  font-family: 'bankgothic_md_btmedium';
   margin: 0;
   padding: 0;
   line-height: 1;
@@ -1752,7 +1760,7 @@ section {
 
 #footer .footer-top .footer-contact h3 {
   font-size: 30px;
-  font-family: 'BankGothic Md BT';
+  font-family: 'bankgothic_md_btmedium';
   margin: 0 0 10px 0;
   padding: 2px 0 2px 0;
   line-height: 1;
@@ -1849,13 +1857,7 @@ section {
 
 #footer .copyright span{
 
-
-  /* @font-face {
-    font-family: 'BankGothic Md BT';
-    src: url('fonts/bank-gothic-medium-bt.ttf');
-  } */
-
-  font-family: 'BankGothic Md BT';
+  font-family: 'bankgothic_md_btmedium';
   font-size: 18px;
 
 }
