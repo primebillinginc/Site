@@ -119,7 +119,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header .logo {
-  font-size: 200%;
+  /* font-size: 200%; */
   font-family: 'bankgothic_md_btmedium';
   margin: 0;
   padding: 0;
@@ -131,6 +131,10 @@ h1, h2, h3, h4, h5, h6 {
 
 #header .logo a {
   color: #fff;
+}
+
+#header h3 {
+  font-size: 30px;
 }
 
 #header .logo img {
