@@ -649,6 +649,12 @@ section {
   line-height: 1;
 }
 
+.about .content ul i img {
+  height: 22px;
+  width: 22px;
+}
+
+
 .about .content p:last-child {
   margin-bottom: 0;
 }
