@@ -390,6 +390,7 @@ h1, h2, h3, h4, h5, h6 {
 #hero {
   background: #012640;
   padding-top: 10px;
+  padding-bottom: 0px;
 }
 
 #hero .container {
@@ -398,7 +399,16 @@ h1, h2, h3, h4, h5, h6 {
 
 #hero h1 {
   margin: 0 0 10px 0;
-  font-size: 39px;
+  font-size: 37px;
+  /* font-size: 37px; */
+  line-height: 56px;
+  color: #fff;
+  text-align: center;
+}
+
+#hero h2 {
+  margin: 0 0 10px 0;
+  /* font-size: 32px; */
   line-height: 56px;
   color: #fff;
   text-align: center;
@@ -407,9 +417,10 @@ h1, h2, h3, h4, h5, h6 {
 #hero h3 {
   color: rgba(255, 255, 255, 0.6);
   margin-bottom: 30px;
-  font-size: 34px;
-  font-family: 'bankgothic_md_btmedium';
+  font-size: 20px;
+  font-family: 'BellMTItalic';
   text-align: center;
+  padding-top: 10px;
 }
 
 #hero h6 {
