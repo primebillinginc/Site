@@ -402,15 +402,12 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 37px;
   padding-bottom: 30px;
   padding-top: 20px;
-  line-height: 56px;
   color: #fff;
   text-align: center;
 }
 
 #hero h2 {
   margin: 0 0 10px 0;
-  /* font-size: 32px; */
-  line-height: 56px;
   color: #fff;
   text-align: center;
 }
