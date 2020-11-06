@@ -1,41 +1,34 @@
 <?php
-  /**
-  * Requires the "PHP Email Form" library
-  * The "PHP Email Form" library is available only in the pro version of the template
-  * The library should be uploaded to: vendor/php-email-form/php-email-form.php
-  * For more info and help: https://bootstrapmade.com/php-email-form/
-  */
+if(isset($_POST['email'])) {
 
-  // Replace contact@example.com with your real receiving email address
-  $receiving_email_address = 'contact@example.com';
+<bold>// Debes editar las próximas dos líneas de código de acuerdo con tus preferencias</bold>
+$email_to = "maikeldroidrc@gmail.com";
+$email_subject = "Contacto desde el sitio web";
 
-  if( file_exists($php_email_form = '../assets/vendor/php-email-form/php-email-form.php' )) {
-    include( $php_email_form );
-  } else {
-    die( 'Unable to load the "PHP Email Form" Library!');
-  }
+<bold>// Aquí se deberían validar los datos ingresados por el usuario</bold>
+if(!isset($_POST['name']) ||
+!isset($_POST['subject']) ||
+!isset($_POST['email']) ||
+!isset($_POST['message'])) {
 
-  $contact = new PHP_Email_Form;
-  $contact->ajax = true;
-  
-  $contact->to = $receiving_email_address;
-  $contact->from_name = $_POST['name'];
-  $contact->from_email = $_POST['email'];
-  $contact->subject = $_POST['subject'];
+echo "<b>Ocurrió un error y el formulario no ha sido enviado. </b><br />";
+echo "Por favor, vuelva atrás y verifique la información ingresada<br />";
+die();
+}
 
-  // Uncomment below code if you want to use SMTP to send emails. You need to enter your correct SMTP credentials
-  /*
-  $contact->smtp = array(
-    'host' => 'example.com',
-    'username' => 'example',
-    'password' => 'pass',
-    'port' => '587'
-  );
-  */
+$email_message = "Detalles del formulario de contacto:\n\n";
+$email_message .= "Nombre: " . $_POST['name'] . "\n";
+$email_message .= "Asunto: " . $_POST['subject'] . "\n";
+$email_message .= "E-mail: " . $_POST['email'] . "\n";
+$email_message .= "Mensaje: " . $_POST['message'] . "\n\n";
 
-  $contact->add_message( $_POST['name'], 'From');
-  $contact->add_message( $_POST['email'], 'Email');
-  $contact->add_message( $_POST['message'], 'Message', 10);
 
-  echo $contact->send();
+<bold>// Ahora se envía el e-mail usando la función mail() de PHP</bold>
+$headers = 'From: '.$email_from."\r\n".
+'Reply-To: '.$email_from."\r\n" .
+'X-Mailer: PHP/' . phpversion();
+@mail($email_to, $email_subject, $email_message, $headers);
+
+echo "¡El formulario se ha enviado con éxito!";
+}
 ?>
