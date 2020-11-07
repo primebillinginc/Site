@@ -21,7 +21,7 @@
 		}
 		
 		function subscribe() {
-		    if (document.getElementById("emailsubscribe").value != ' ') {
+		    if (document.getElementById("emailsubscribe").value != '') {
 			 
 			Email.send({
 				Host: "smtp.gmail.com",
@@ -33,7 +33,7 @@
 				Body : document.getElementById("emailsubscribe").value + " need subscribe to www.primebillinginc.com",
 			})
 			.then(function(message){
-				 alert("Successful subscription"),
+				//  alert("Successful subscription"),
 				document.getElementById("formsubscribe").reset();
 				document.getElementById("emailsubscribe").focus();
 			});
