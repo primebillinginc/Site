@@ -119,20 +119,34 @@
     } else {
       // php_email_form_submit(this_form,action,this_form.serialize());
 
-      Email.send({
-				Host: "smtp.gmail.com",
-				Username : "siteprimebillinginc@gmail.com",
-				Password : "Mikipass.1980",
-				To : "siteprimebillinginc@gmail.com",
-				From : document.getElementById("email").value,
-				Subject : document.getElementById("subject").value,
-				Body : document.getElementById("name").value + " wrote: <br>"+ document.getElementById("message").value,
-			})
-
+      sendEmail();
     }
     
     return true;
   });
+
+
+  function sendEmail() {
+  
+    Email.send({
+      Host: "smtp.gmail.com",
+      Username : "siteprimebillinginc@gmail.com",
+      Password : "Mikipass.1980",
+      To : "siteprimebillinginc@gmail.com",
+      From : document.getElementById("email").value,
+      Subject : document.getElementById("subject").value,
+      Body : document.getElementById("name").value + " wrote: <br>"+ document.getElementById("message").value,
+    })
+    .then(function(message){
+      alert("Mail sent successfully"),
+      document.getElementById("formemail").reset();
+      document.getElementById("name").focus();
+    });
+  }
+
+
+
+
 
   function php_email_form_submit(this_form, action, data) {
     $.ajax({
