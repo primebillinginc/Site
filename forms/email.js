@@ -23,7 +23,7 @@
 						Host: "smtp.gmail.com",
 						Username : "siteprimebillinginc@gmail.com",
 						Password : "Mikipass.1980",
-						To : "siteprimebillinginc@gmail.com",
+						To: "siteprimebillinginc@gmail.com",
 						From : "siteprimebillinginc@gmail.com",
 						Subject : "Subscribe",
 						Body : document.getElementById("emailsubscribe").value + " need subscribe to www.primebillinginc.com",
@@ -35,7 +35,7 @@
 					});
 				} 
 				else {
-					   document.getElementById("emailsubscribe").focus(); 
+					document.getElementById("emailsubscribe").focus(); 
 				}
 		}
 
